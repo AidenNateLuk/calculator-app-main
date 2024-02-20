@@ -1,0 +1,280 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+body {
+  width: 100vw;
+  background-color: hsl(222, 26%, 31%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    .title {
+      color: white;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .num {
+        display: flex;
+        flex-direction: column;
+        .themes {
+          display: flex;
+          flex-direction: column;
+          margin-left: 4rem;
+          .selector {
+            padding-left: 0.5rem;
+            width: 60px;
+            display: flex;
+            flex-direction: row;
+            gap: 0.75rem;
+            p {
+              cursor: pointer;
+            }
+          }
+          .toggle {
+            width: 62px;
+            background-color: white;
+            border-radius: 5px;
+            align-items: center;
+          }
+          .toggle.two {
+            background-color: hsl(0, 5%, 81%);
+          }
+          .toggle.three {
+            background-color: hsl(268, 71%, 12%);
+          }
+          .cursor {
+            transition: transform 0.5s ease;
+          }
+          .cursor.one {
+            transform: translateX(0);
+          }
+          .cursor.two {
+            transform: translateX(30%);
+          }
+          .cursor.three {
+            transform: translateX(65%);
+          }
+        }
+      }
+    }
+
+    .screen {
+      margin-top: 2rem;
+      width: 300px;
+      margin-bottom: 1.5rem;
+
+      #screen {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 10px;
+        border: none;
+        background-color: hsl(224, 36%, 15%);
+        color: white;
+        font-size: 3.5em;
+        font-weight: 600;
+        text-align: right;
+      }
+      #screen.two {
+        background-color: hsl(0, 0%, 93%);
+        color: hsl(60, 10%, 19%);
+      }
+      #screen.three {
+        background-color: hsl(268, 71%, 12%);
+      }
+    }
+
+    .cal-body {
+      width: 300px;
+      background-color: hsl(223, 31%, 20%);
+      border-radius: 10px;
+
+      .buttons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1rem;
+        gap: 1rem;
+
+        button {
+          cursor: pointer;
+          border-radius: 5px;
+          border: none;
+          font-size: 2rem;
+          padding: 0.5rem;
+          box-shadow: hsl(224, 28%, 35%) 1px;
+          color: hsl(221, 14%, 31%);
+        }
+        button:hover {
+          background-color: hsla(0, 0%, 100%, 0.9);
+          box-shadow: 0 2px 4px hsl(224, 28%, 45%, 0.5);
+        }
+        button:active {
+          background-color: hsl(268, 47%, 41%);
+          box-shadow: 0 2px 6px hsl(224, 28%, 55%, 0.5);
+        }
+        /*Three*/
+        button.three {
+          background-color: hsl(268, 47%, 21%);
+          box-shadow: 0 2px 6px hsl(290, 70%, 36%);
+          color: hsl(52, 100%, 62%);
+        }
+        button.three:hover {
+          background-color: hsl(268, 47%, 31%);
+          box-shadow: 0 2px 6px hsl(285, 91%, 62%);
+        }
+        button.three:active {
+          background-color: hsl(268, 47%, 41%);
+          box-shadow: 0 2px 6px hsl(285, 91%, 72%);
+        }
+        /*Two*/
+        #delete.two {
+          background-color: hsl(185, 42%, 37%);
+        }
+
+        #delete {
+          cursor: pointer;
+          font-size: 1rem;
+          font-weight: 600;
+          color: white;
+          background-color: hsl(225, 21%, 49%);
+        }
+        #delete:hover {
+          background-color: hsl(225, 21%, 59%);
+          box-shadow: 0 2px 4px hsl(224, 28%, 45%, 0.5);
+        }
+        #delete:active {
+          background-color: hsl(225, 21%, 69%);
+          box-shadow: 0 2px 6px hsl(224, 28%, 55%, 0.5);
+        }
+        #delete.three {
+          background-color: hsl(281, 89%, 26%);
+          box-shadow: 0 2px 6px hsl(285, 91%, 52%);
+        }
+        #delete.three:hover {
+          background-color: hsl(281, 89%, 36%);
+
+          box-shadow: 0 2px 6px hsl(285, 91%, 80%);
+        }
+        #delete.three:active {
+          background-color: hsla(0, 0%, 100%, 0.8);
+
+          box-shadow: 0 2px 6px hsl(285, 91%, 70%);
+        }
+      }
+      .operators {
+        width: 100%;
+        padding: 1rem;
+        padding-top: 0;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        #reset {
+          cursor: pointer;
+          padding: 1rem 0;
+          font-size: 1rem;
+          font-weight: 600;
+          color: white;
+          background-color: hsl(225, 21%, 49%);
+          border: none;
+          border-radius: 5px;
+        }
+        #reset:hover {
+          background-color: hsl(225, 21%, 59%);
+          box-shadow: 0 2px 4px hsl(224, 28%, 55%, 0.5);
+        }
+        #reset:active {
+          background-color: hsl(225, 21%, 69%);
+          box-shadow: 0 2px 6px hsl(224, 28%, 55%, 0.5);
+        }
+        #reset.two {
+          background-color: hsl(185, 42%, 37%);
+        }
+        /*Reset Three*/
+        #reset.three {
+          background-color: hsl(281, 89%, 26%);
+          box-shadow: 0 2px 6px hsl(285, 91%, 52%);
+        }
+        #reset.three:hover {
+          background-color: hsl(281, 89%, 36%);
+          box-shadow: 0 2px 6px hsl(285, 91%, 52%);
+        }
+        #reset.three:active {
+          background-color: hsl(281, 89%, 46%);
+          box-shadow: 0 2px 6px hsl(285, 91%, 52%);
+        }
+        #equals {
+          cursor: pointer;
+          font-size: 1rem;
+          background-color: hsl(6, 63%, 50%);
+          color: white;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px hsla(6, 70%, 34%, 0.5);
+        }
+        #equals.two {
+          background-color: hsl(25, 98%, 40%);
+        }
+        /*equals three*/
+        #equals.three {
+          background: hsl(176, 100%, 44%);
+          box-shadow: 0 2px 4px hsl(177, 92%, 70%);
+        }
+        #equals.three:hover {
+          background: hsl(176, 100%, 54%);
+          box-shadow: 0 2px 4px hsl(177, 92%, 80%);
+        }
+        #equals.three:active {
+          background: hsl(176, 100%, 64%);
+          box-shadow: 0 2px 4px hsl(177, 92%, 90%);
+        }
+        #equals:hover {
+          background-color: hsl(6, 63%, 60%);
+          box-shadow: 0 2px 4px hsla(6, 70%, 44%, 0.5);
+        }
+        #equals:active {
+          background-color: hsl(6, 63%, 70%);
+          box-shadow: 0 2px 6px hsla(6, 70%, 54%, 0.5);
+        }
+      }
+    }
+    .cal-body.two {
+      background-color: hsl(0, 5%, 81%);
+    }
+    .cal-body.three {
+      background-color: hsl(268, 71%, 12%);
+    }
+  }
+}
+
+body.two {
+  background-color: hsl(0, 0%, 90%);
+}
+body.three {
+  background-color: hsl(268, 75%, 9%);
+}
+
+@media (min-width: 768px) {
+  body {
+    .container {
+      width: 450px;
+
+      .screen {
+        width: 450px;
+        #screen {
+          height: 150px;
+          font-size: 5rem;
+        }
+      }
+      .cal-body {
+        width: 450px;
+      }
+    }
+  }
+}

@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
+    <title>Frontend Mentor | Calculator app</title>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>calc</h1>
+
+        <div class="num">
+          <div class="themes">
+            <div class="selector">
+              <p name="theme" id="one" onclick="toggleThemeFirst()">1</p>
+              <p name="theme" id="two" onclick="toggleThemeSecond()">2</p>
+              <p name="theme" id="three" onclick="toggleThemeThird()">3</p>
+            </div>
+            <div class="toggle">
+              <p id="toggle-cursor" class="cursor">🔴</p>
+            </div>
+          </div>
+          <div class="control">
+            <p>THEME</p>
+          </div>
+        </div>
+      </div>
+      <div class="screen">
+        <input id="screen" name="calc" readonly />
+      </div>
+      <div class="cal-body">
+        <div class="buttons">
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+          <button id="delete" onclick="deleteFromDisplay()">DEL</button>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="appendToDisplay('+')">+</button>
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="appendToDisplay('-')">-</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('/')">/</button>
+          <button onclick="appendToDisplay('*')">x</button>
+        </div>
+        <div class="operators">
+          <button id="reset" onclick="clearDisplay()">RESET</button>
+          <button id="equals" onclick="calculate()">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
 </html>
