@@ -39,8 +39,8 @@ body {
           }
           .toggle {
             width: 62px;
-            background-color: white;
-            border-radius: 5px;
+            background-color: hsl(223, 31%, 20%);
+            border-radius: 15px;
             align-items: center;
           }
           .toggle.two {
